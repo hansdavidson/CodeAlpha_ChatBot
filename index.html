@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-orb orb3"></div>
+
+    <header class="navbar">
+        <div class="logo-wrap">
+            <div class="logo-icon">C</div>
+            <div class="logo-text">ChatBot</div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/chatbot">Chatbot</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="hero-page">
+        <section class="hero-card">
+            <div class="hero-badge">Chatbot Website</div>
+            <h1>Meet your <span>smart</span> chatbot </h1>
+            <p>
+                This website contains a modern homepage and a chatbot page.
+                It also includes dark and light mode, chatbot avatars, and a typing animation.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/chatbot" class="btn btn-primary">Open Chatbot</a>
+                <a href="#features" class="btn btn-secondary">See Features</a>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="feature-card">
+                <h3>Dark / Light Mode</h3>
+                <p>Switch the complete website appearance instantly with a modern theme toggle.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Avatar Chat UI</h3>
+                <p>User and bot messages include beautiful avatar icons for a better chat feel.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Typing Animation</h3>
+                <p>The bot shows an animated typing indicator before displaying the reply.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

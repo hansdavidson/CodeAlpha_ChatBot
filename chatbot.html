@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorBot Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-orb orb3"></div>
+
+    <header class="navbar">
+        <div class="logo-wrap">
+            <div class="logo-icon">C</div>
+            <div class="logo-text">ColorBot</div>
+        </div>
+
+        <div class="nav-right">
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/chatbot" class="active-link">Chatbot</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="chatbot-page">
+        <section class="chatbot-container">
+            <div class="chat-header">
+                <div>
+                    <h1>Chatbot Assistant</h1>
+                    <p>Ask predefined questions and get instant responses with animation.</p>
+                </div>
+                <div class="chat-status">Online</div>
+            </div>
+
+            <div class="suggestions">
+                <button onclick="fillSuggestion('hello')">hello</button>
+                <button onclick="fillSuggestion('what is flask')">what is flask</button>
+                <button onclick="fillSuggestion('what can you do')">what can you do</button>
+                <button onclick="fillSuggestion('who created you')">who created you</button>
+                <button onclick="fillSuggestion('bye')">bye</button>
+            </div>
+
+            <div id="chat-box" class="chat-box">
+                <div class="chat-row bot-row">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="message bot-message">
+                        Hello! I am your predefined chatbot. Try asking: <b>hello</b>, <b>help</b>, <b>what is flask</b>, or <b>bye</b>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your message here..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
